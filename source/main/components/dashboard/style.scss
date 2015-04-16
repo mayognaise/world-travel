@@ -1,0 +1,14 @@
+@import "../../../style/variables";
+
+article {
+  position: absolute;
+  margin: 1em;
+  right: 0;
+  max-width: 428px;
+  img {
+    max-width: 100%;
+  }
+  h2 {
+    padding-top: 0;
+  }
+}

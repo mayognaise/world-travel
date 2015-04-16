@@ -1,0 +1,46 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: absolute;
+  background: $bgColor;
+  color: $textColor;
+  font-family: $bodyFont;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 200;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: .2em 0;
+}
+
+a {
+  color: hsl(200, 50%, 50%);
+}
+
+button {
+  cursor: pointer;
+  font-family: $bodyFont;
+  font-size: 1em;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

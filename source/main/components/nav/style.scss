@@ -1,0 +1,15 @@
+@import "../../../style/variables";
+
+nav {
+  position: absolute;
+  .active {
+    cursor: default;
+    color: red;
+  }
+  ul {
+    padding-left: 1em;
+  }
+  li {
+    list-style: none;
+  }
+}

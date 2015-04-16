@@ -1,0 +1,7 @@
+.DS_Store
+._*
+node_modules
+.env
+awsConfig.json
+dist/
+.awspublish-*
