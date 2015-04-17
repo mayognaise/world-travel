@@ -7,6 +7,9 @@ article {
   max-width: 428px;
   img {
     max-width: 100%;
+    [mobile="true"] & {
+      display: none;
+    }
   }
   h2 {
     padding-top: 0;

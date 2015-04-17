@@ -7,7 +7,7 @@ var {RouteHandler} = Router,
 App = React.createClass({
   render() {
     return (
-      <div>
+      <div className="app">
         <Webgl />
         <Nav />
         <RouteHandler {...this.props}/>

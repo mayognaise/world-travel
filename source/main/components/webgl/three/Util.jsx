@@ -9,14 +9,14 @@ var Util = {
    */
   latLongToVector3 (lat, lon, radius) {
 
-    var phi = (lat) * TO_RADIANS;
-    var theta = (lon - 180) * TO_RADIANS;
+    var phi = (lat) * TO_RADIANS,
+      theta = (lon - 180) * TO_RADIANS;
 
-    var x = -(radius) * Math.cos(phi) * Math.cos(theta);
-    var y = (radius) * Math.sin(phi);
-    var z = (radius) * Math.cos(phi) * Math.sin(theta);
+    var x = -(radius) * Math.cos(phi) * Math.cos(theta),
+      y = (radius) * Math.sin(phi),
+      z = (radius) * Math.cos(phi) * Math.sin(theta);
 
-    return new THREE.Vector3(x,y,z);
+    return new THREE.Vector3(x, y, z);
   },
 
   /**
@@ -44,6 +44,26 @@ var Util = {
     if (unit=='K') { dist = dist * 1.609344; }
     if (unit=='N') { dist = dist * 0.8684; }
     return dist
+  },
+
+  /**
+   * Constrain between the ranges
+   */
+  constrain (val, min, max){
+    if(val < min) {
+      val = min;
+    }
+    else if(val > max) {
+      val = max;
+    }
+    return val;
+  },
+
+  /**
+   * Remove all children of Object3D in Three.js
+   */
+  removeAllChildren(obj) {
+    _.each(obj.children, (child) => {obj.remove(child);});
   }
 };
 

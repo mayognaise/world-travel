@@ -17,6 +17,18 @@ require('gsap/src/uncompressed/TweenMax');
 var context = require('../json/context');
 var travelItems = require('../json/travelItems');
 
+
+/*
+ * Mobile detection
+ */
+var md = new MobileDetect(window.navigator.userAgent);
+if(md.mobile()) {
+  document.body.setAttribute('mobile', 'true');
+}
+
+/*
+ * Set routes
+ */
 var { Route, DefaultRoute, NotFoundRoute } = Router,
     App = require('./App.jsx'),
     Dashboard = require('./components/dashboard');
